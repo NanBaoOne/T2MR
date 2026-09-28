@@ -1,0 +1,8 @@
+# Text encoder: RoBERTa-large (1024-d)
+# `text_encoder` is a HuggingFace model id or a local directory.
+motion_encoder: t2mr
+text_encoder: roberta-large
+text_embedding_dims: 1024
+motion_embedding_dims: 384
+projection_dims: 256
+pretrained_motion_path: ./weights/ntu120-xsub-joint.pt

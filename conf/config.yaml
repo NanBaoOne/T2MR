@@ -1,0 +1,37 @@
+exp_name: t2mr
+checkpoints_dir: ./checkpoints/${exp_name}/${dataset.dataset_name}
+
+hydra:
+  run:
+    dir: ./checkpoints/${exp_name}/${dataset.dataset_name}
+
+defaults:
+  - _self_
+  - dataset: HumanML3D
+  - model: roberta
+
+preprocess:
+  padding: true
+
+train:
+  batch_size: 32
+  epoch: 200
+  num_workers: 8
+  optimizer:
+    motion_lr: 1.0e-05
+    text_lr: 1.0e-05
+    head_lr: 1.0e-05
+  train_motion_encoder: true
+  train_text_encoder: true
+  motion_encoder_pretrained: true
+  seed: 42
+
+eval:
+  eval_train: false
+  use_best_model: true
+  fast_reranking:
+    enabled: false
+    gamma1: 10.0
+    gamma2: 10.0
+    lambda1: 10.0
+    lambda2: 10.0

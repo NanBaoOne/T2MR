@@ -1,0 +1,21 @@
+exp_name: t2mr
+checkpoints_dir: ./checkpoints/${exp_name}/${dataset.dataset_name}
+
+hydra:
+  run:
+    dir: ./checkpoints/${exp_name}/${dataset.dataset_name}/test/
+
+defaults:
+  - _self_
+  - dataset: HumanML3D
+  - model: roberta
+
+eval:
+  eval_train: false
+  use_best_model: true
+  fast_reranking:
+    enabled: false
+    gamma1: 10.0
+    gamma2: 10.0
+    lambda1: 10.0
+    lambda2: 10.0
