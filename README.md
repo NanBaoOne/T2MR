@@ -161,13 +161,6 @@ python scripts/test.py exp_name=t2mr_humanml3d eval.fast_reranking.enabled=true
 python scripts/test.py exp_name=t2mr_humanml3d eval.eval_train=true
 ```
 
-## Supplementary video
-
-<video controls width="100%">
-  <source src="assets/Video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
 ## License
 
 The code is released under the [CC BY-NC 4.0](LICENSE) license. See
