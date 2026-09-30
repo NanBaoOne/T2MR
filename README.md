@@ -5,9 +5,9 @@
 
 Text–motion retrieval (TMR) aims to establish semantic alignment between textual descriptions and 3D human motion sequences. Despite recent progress, its development is fundamentally constrained by the asymmetric maturity of text and motion representations: text models benefit from massive corpora and foundation models, whereas motion representations remain underexplored due to limited data scale and complex spatiotemporal structure.
 
-To alleviate this asymmetry, we propose T$^2$MR, a transfer-based framework that leverages motion representations learned from large-scale action recognition data to enhance motion representation learning for TMR. Concretely, we design the TMR motion encoder and the action recognition backbone to share an isomorphic spatiotemporal graph convolution architecture, which enables effective reuse of pre-trained motion representations. To further address cross-topology and cross-task discrepancies, we introduce topology alignment and contrastive adaptation mechanisms, facilitating robust cross-modal and cross-task representation alignment.
+To alleviate this asymmetry, we propose T²MR, a transfer-based framework that leverages motion representations learned from large-scale action recognition data to enhance motion representation learning for TMR. Concretely, we design the TMR motion encoder and the action recognition backbone to share an isomorphic spatiotemporal graph convolution architecture, which enables effective reuse of pre-trained motion representations. To further address cross-topology and cross-task discrepancies, we introduce topology alignment and contrastive adaptation mechanisms, facilitating robust cross-modal and cross-task representation alignment.
 
-Extensive experiments on two representative benchmarks, HumanML3D and KIT-ML, demonstrate that T$^2$MR outperforms existing state-of-the-art methods, with particularly strong improvements in retrieving fine-grained motion semantics and long-term motion sequences.
+Extensive experiments on two representative benchmarks, HumanML3D and KIT-ML, demonstrate that T²MR outperforms existing state-of-the-art methods, with particularly strong improvements in retrieving fine-grained motion semantics and long-term motion sequences.
 
 ## Method overview
 
